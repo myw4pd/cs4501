@@ -14,7 +14,8 @@ Including another URLconf
 """
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
-from main import views as main_views 
+from main import views as main_views
+from review import views as review_views
 
 urlpatterns = patterns('',
     url(r'^review/', include('review.urls')),
@@ -23,4 +24,7 @@ urlpatterns = patterns('',
     url(r'^api/v1/users/create$', main_views.create_user),
     url(r'^api/v1/users/(\d+)$', main_views.lookup_user),
     url(r'^api/v1/users/(\d+)/update$', main_views.update_user),
+    url(r'^api/v1/review/create$', review_views.create_UserReview),
+    url(r'^api/v1/review/(\d+)$', review_views.lookup_userReview),
+
 )
