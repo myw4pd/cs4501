@@ -35,7 +35,7 @@ def create_user(request):
         return _error_response(request, "db error")
 
     return _success_response(request, {'user_id': u.pk})
-
+#Get user
 def lookup_user(request, user_id):
     if request.method != 'GET':
         return _error_response(request, "must make GET request")

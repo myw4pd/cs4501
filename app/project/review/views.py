@@ -15,7 +15,7 @@ from django import db
 
 def index(request):
     return HttpResponse("Hello. You're at the reviews index.")
-
+#Implement when car is implemented
 # Create your views here.
 # def create_CarReview(request):
 #     if request.method != POST:
